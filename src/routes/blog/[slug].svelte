@@ -28,7 +28,7 @@
       "@type": "NewsArticle",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:3000/blog"
+        "@id": "https://xn--e28h.my.id/blog"
       },
       "name": `${post.title}`,
       "headline": `${post.headline}`,
@@ -38,7 +38,7 @@
         "name": "Riza's Blog",
         "logo": {
           "@type": "ImageObject",
-          "url": `http://localhost:3000/logo.jpg`
+          "url": `https://xn--e28h.my.id/logo.jpg`
           }
         },
       "image": [

@@ -1,1 +1,2 @@
 User-agent: *
+sitemap : https://xn--e28h.my.id/sitemap.xml

@@ -35,11 +35,6 @@
     text-align: center;
   }
 
-  figcaption {
-    font-size: 0.8em;
-    font-style: italic;
-  }
-
   img {
     width: 100%;
     max-width: 400px;
@@ -75,6 +70,18 @@
   <meta name="geo.region" content="Indonesia" />
   <meta name="language" content="id" />
   <link rel="alternate" hreflang="id-ID" href={link} />
+  <meta name="geo.region" content="Indonesia" />
+  <meta name="language" content="id" />
+  <link rel="alternate" hreflang="id-ID" href={link} />  
+  <meta property="og:title" content="Kumpulan postingan web developer">
+  <meta property="og:site_name" content="Saiful Riza's Blogs">
+  <meta property="og:url" content={link}>
+  <meta property="og:description" content="Kumpulan postingan dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar teknologi, web development dan berbagai potingan yang menarik lainnya">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="favicon.png">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@rizasblog" />
+  <meta name="twitter:creator" content="@riza" />
   <title>It's All About Saiful Riza</title>
 </svelte:head>
 
@@ -87,6 +94,6 @@
   </div>
 
   <figure>
-    <img alt="Person typing on laptop" src="undraw-illustration.svg" />
+    <img alt="Person typing on laptop" src="undraw-illustration.svg"/>
   </figure>
 </div>

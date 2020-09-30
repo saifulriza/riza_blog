@@ -1,7 +1,7 @@
 ---
 title: Hello World
 headline: Hello World
-image: /favicon.jpg
+image: https://pedantic-liskov-82e0d5.netlify.app/favicon.jpg
 date: 2017-11-27 06:34:50
 description: "Hello world"
 tags: ['hello']

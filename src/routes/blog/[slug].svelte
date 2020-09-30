@@ -96,6 +96,7 @@
   <meta name="twitter:title" content=@{post.title} />
   <meta name="twitter:description" content=@{post.description} />
   <meta name="twitter:creator" content=@{post.twitter_author} />
+  <meta name="twitter:image" content="https://pedantic-liskov-82e0d5.netlify.app/riza.png" />
   <link rel="canonical" href={link}/>
   {@html jsonldScript}
   <title>{post.title}</title>

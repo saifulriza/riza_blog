@@ -84,6 +84,7 @@ jsonld = JSON.stringify(jsonld);
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@rizasblog" />
 <meta name="twitter:creator" content="@riza" />
+<meta name="twitter:image" content="https://pedantic-liskov-82e0d5.netlify.app/riza.png" />
 <link rel="canonical" href={link}/>
 {@html jsonldScript}
   <title>Blog</title>

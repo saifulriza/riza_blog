@@ -110,13 +110,13 @@ jsonld = JSON.stringify(jsonld);
   <meta property="og:url" content={link}>
   <meta property="og:description" content="Kumpulan postingan dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar teknologi, web development dan berbagai potingan yang menarik lainnya">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="favicon.png">
+  <meta property="og:image" content="https://xn--e28h.my.id/favicon.png">
   <meta name="twitter:title" content="Kumpulan postingan web developer" />
   <meta name="twitter:description" content="Kumpulan postingan dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar teknologi, web development dan berbagai potingan yang menarik lainnya" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@rizasblog" />
   <meta name="twitter:creator" content="@riza" />
-  <meta name="twitter:image" content="https://pedantic-liskov-82e0d5.netlify.app/riza.png" />
+  <meta name="twitter:image" content="https://xn--e28h.my.id/riza.jpg" />
   <link rel="canonical" href={link}/>
   {@html jsonldScript}
   <title>It's All About Saiful Riza</title>

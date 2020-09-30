@@ -98,28 +98,28 @@ jsonld = JSON.stringify(jsonld);
 <svelte:head>
   <meta
     name="Description"
-    content="Kumpulan postingan dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar teknologi, web development dan berbagai potingan yang menarik lainnya" />
+    content="Kumpulan artikel dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar web development dan hal lainnya" />
   <meta name="geo.region" content="Indonesia" />
   <meta name="language" content="id" />
   <link rel="alternate" hreflang="id-ID" href={link} />
   <meta name="geo.region" content="Indonesia" />
   <meta name="language" content="id" />
   <link rel="alternate" hreflang="id-ID" href={link} />  
-  <meta property="og:title" content="Kumpulan postingan web developer">
+  <meta property="og:title" content="Kumpulan Artikel Saiful Riza">
   <meta property="og:site_name" content="Saiful Riza's Blogs">
   <meta property="og:url" content={link}>
-  <meta property="og:description" content="Kumpulan postingan dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar teknologi, web development dan berbagai potingan yang menarik lainnya">
+  <meta property="og:description" content="Kumpulan artikel dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar web development dan hal lainnya">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://xn--e28h.my.id/favicon.png">
-  <meta name="twitter:title" content="Kumpulan postingan web developer" />
-  <meta name="twitter:description" content="Kumpulan postingan dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar teknologi, web development dan berbagai potingan yang menarik lainnya" />
+  <meta name="twitter:title" content="Kumpulan Artikel Saiful Riza" />
+  <meta name="twitter:description" content="Kumpulan artikel dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar web development dan hal lainnya" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@rizasblog" />
   <meta name="twitter:creator" content="@riza" />
   <meta name="twitter:image" content="https://xn--e28h.my.id/riza.jpg" />
   <link rel="canonical" href={link}/>
   {@html jsonldScript}
-  <title>It's All About Saiful Riza</title>
+  <title>It's All About Saiful Riza And His Journey With his Laptop</title>
 </svelte:head>
 
 <div class="home-container">

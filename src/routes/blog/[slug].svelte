@@ -99,7 +99,7 @@
   <meta name="twitter:image" content="https://xn--e28h.my.id/riza.jpg" />
   <link rel="canonical" href={link}/>
   {@html jsonldScript}
-  <title>{post.title}</title>
+  <title>{post.title} | Blog Riza</title>
 </svelte:head>
 
 <header>

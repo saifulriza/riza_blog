@@ -23,3 +23,7 @@
   for = "*.svg" # css files too
   [headers.values]
     Cache-Control = "public, max-age=604800"
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+  [plugins.inputs]
+  buildDir = "__sapper__/export"

@@ -5,6 +5,38 @@
   onMount(() => {
     link = window ? window.location.href : "";
   });
+
+  let jsonld =
+{
+  "@context": "http://www.schema.org",
+  "@type": "person",
+  "name": "Saiful Riza",
+  "jobTitle": "Web developer",
+  "height": "72 inches",
+  "gender": "male",
+  "url": "https://riza.my.id",
+  "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Matangkuli, Aceh utara",
+     "addressLocality": "Aceh utara",
+     "addressRegion": "Aceh",
+     "postalCode": "24386",
+     "addressCountry": "Indonesia"
+  },
+  "email": "mail.saifulriza@gmail.com",
+  "birthDate": "2000-03-18",
+  "alumniOf": "Universitas Malikussaleh",
+  "birthPlace": "Matangkuli",
+  "memberOf": "Republican party",
+  "nationality": "Indonesian",
+  "colleague": [
+     "https://unimal.ac.id"
+  ]
+}
+jsonld = JSON.stringify(jsonld);
+  let jsonldScript = `<script type="application/ld+json">${jsonld +
+    "<"}/script>`;
+
 </script>
 <style>
   .home-container {
@@ -79,10 +111,13 @@
   <meta property="og:description" content="Kumpulan postingan dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar teknologi, web development dan berbagai potingan yang menarik lainnya">
   <meta property="og:type" content="article">
   <meta property="og:image" content="favicon.png">
+  <meta name="twitter:title" content="Kumpulan postingan web developer" />
+  <meta name="twitter:description" content="Kumpulan postingan dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar teknologi, web development dan berbagai potingan yang menarik lainnya" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@rizasblog" />
   <meta name="twitter:creator" content="@riza" />
   <link rel="canonical" href={link}/>
+  {@html jsonldScript}
   <title>It's All About Saiful Riza</title>
 </svelte:head>
 

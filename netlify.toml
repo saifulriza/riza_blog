@@ -30,4 +30,6 @@ package = "@netlify/plugin-sitemap"
     exclude = [
     './__sapper__/export/service-worker-index.js',
     './__sapper__/export/service-worker.js',
+    './__sapper__/export/service-worker-index',
+    '**/**/service-worker-index',
   ]

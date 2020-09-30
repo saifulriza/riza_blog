@@ -39,7 +39,7 @@
         "name": "Riza's Blog",
         "logo": {
           "@type": "ImageObject",
-          "url": `https://xn--e28h.my.id/logo.jpg`
+          "url": `https://xn--e28h.my.id/favicon.png`
           }
         },
       "image": [

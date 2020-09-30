@@ -7,5 +7,5 @@
 </style>
 
 <a href="/">
-  <img alt="Sapper" src='logo-192.png'>
+  <img alt="Riza's Blog" src='pedantic-liskov-82e0d5.netlify.app'>
 </a>

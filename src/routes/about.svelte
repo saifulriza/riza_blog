@@ -44,6 +44,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@rizasblog" />
 <meta name="twitter:creator" content="@riza" />
+<link rel="canonical" href={link}/>
   <title>About</title>
 </svelte:head>
 

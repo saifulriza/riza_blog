@@ -82,6 +82,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@rizasblog" />
   <meta name="twitter:creator" content="@riza" />
+  <link rel="canonical" href={link}/>
   <title>It's All About Saiful Riza</title>
 </svelte:head>
 

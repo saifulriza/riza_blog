@@ -93,6 +93,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content=@{post.twitter_site} />
   <meta name="twitter:creator" content=@{post.twitter_author} />
+  <link rel="canonical" href={link}/>
   {@html jsonldScript}
   <title>{post.title}</title>
 </svelte:head>

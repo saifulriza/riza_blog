@@ -20,6 +20,7 @@
 
   onMount(() => {
     link = window ? window.location.href : "";
+    document.querySelector("#hightlight-css").removeAttribute('disabled');
   });
   export let post;
 

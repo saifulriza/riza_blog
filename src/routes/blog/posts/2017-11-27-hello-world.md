@@ -1,7 +1,7 @@
 ---
 title: Hello World
 headline: Hello World
-image: https://xn--e28h.my.id/gambar.jpg
+image: favicon.jpg
 date: 2017-11-27 06:34:50
 description: "Hello world"
 tags: ['hello']

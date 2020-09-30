@@ -93,6 +93,8 @@
   <meta property="og:image" content={post.image}>
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content=@{post.twitter_site} />
+  <meta name="twitter:title" content=@{post.title} />
+  <meta name="twitter:description" content=@{post.description} />
   <meta name="twitter:creator" content=@{post.twitter_author} />
   <link rel="canonical" href={link}/>
   {@html jsonldScript}

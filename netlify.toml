@@ -27,3 +27,7 @@
 package = "@netlify/plugin-sitemap"
   [plugins.inputs]
   buildDir = "__sapper__/export"
+    exclude = [
+    './__sapper__/export/service-worker-index.js',
+    './__sapper__/export/service-worker.js',
+  ]

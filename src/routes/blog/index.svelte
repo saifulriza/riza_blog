@@ -6,6 +6,7 @@
   }
 </script>
 <script>
+  import Pagination from '../../components/Pagination.svelte';
   export let posts;
   import { onMount } from "svelte";
   export let link;
@@ -106,4 +107,5 @@ jsonld = JSON.stringify(jsonld);
       </div>
     </div>
   {/each}
+  <Pagination totalPages={8} />
 </div>

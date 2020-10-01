@@ -33,5 +33,3 @@ package = "@netlify/plugin-sitemap"
     './__sapper__/export/service-worker-index',
     '**/**/service-worker-index',
   ]
-[[plugins]]
-package = "netlify-plugin-amp-server-side-rendering"

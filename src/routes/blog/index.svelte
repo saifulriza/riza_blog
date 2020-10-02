@@ -107,5 +107,5 @@ jsonld = JSON.stringify(jsonld);
       </div>
     </div>
   {/each}
-  <Pagination totalPages={8} />
+  <Pagination totalPages={1} />
 </div>

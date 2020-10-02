@@ -9,6 +9,7 @@ import config from 'sapper/config/rollup.js'
 import markdown from './src/utils/markdown.js'
 import sveltePreprocess from 'svelte-preprocess';
 import pkg from './package.json'
+import json from '@rollup/plugin-json'
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
@@ -42,6 +43,7 @@ export default {
       resolve(),
       commonjs(),
       markdown(),
+      json(),
       glob(),
       legacy &&
         babel({
@@ -91,6 +93,7 @@ export default {
       }),
       resolve(),
       commonjs(),
+      json(),
       markdown(),
       glob(),
     ],

@@ -33,3 +33,8 @@ package = "@netlify/plugin-sitemap"
     './__sapper__/export/service-worker-index',
     '**/**/service-worker-index',
   ]
+[[redirects]]
+  from = "/l"
+  to = "https://shortme.herokuapp.com"
+  status = 200
+  force = true

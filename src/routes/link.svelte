@@ -16,7 +16,7 @@
             body : JSON.stringify({'url' : url})
         })
     }
-  
+
     let jsonld =
   {
     "@context": "http://www.schema.org",
@@ -77,7 +77,7 @@ transition: 0.5s;
 
 .button4:hover {background-color: #e7e7e7;}
   </style>
-  
+
   <svelte:head>
     <meta
     name="Description"
@@ -87,7 +87,7 @@ transition: 0.5s;
   <link rel="alternate" hreflang="id-ID" href={link} />
   <meta name="geo.region" content="Indonesia" />
   <meta name="language" content="id" />
-  <link rel="alternate" hreflang="id-ID" href={link} />  
+  <link rel="alternate" hreflang="id-ID" href={link} />
   <meta property="og:title" content="About | Kenali Saiful Riza lebih dekat">
   <meta property="og:site_name" content="Saiful Riza's Blogs">
   <meta property="og:url" content={link}>
@@ -102,11 +102,10 @@ transition: 0.5s;
   {@html jsonldScript}
     <title>Link | Buat shortlink dengan url unik</title>
   </svelte:head>
-  
+
   <div class="container">
     <h1>Pendekkan</h1>
     <input bind:value={url} placeholder="Paste link.." type="text" id="link">
     <button class="button button4" on:click={postLink} >Submit</button>
 <p>Hello {url || 'stranger'}!</p>
   </div>
-  

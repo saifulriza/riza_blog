@@ -1,1 +1,3 @@
-export function get(req, res, next) { console.log('get request berhasil') }
+export function get(req, res, next) {
+  console.log("get request berhasil");
+}

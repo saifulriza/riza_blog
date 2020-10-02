@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/l/:match*",
+        "destination": "https://shortme.herokuapp.com/:match*"
+      }
+    ]
+  }

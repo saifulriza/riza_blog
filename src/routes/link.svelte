@@ -1,23 +1,21 @@
 <script>
     import { onMount } from "svelte";
     // import Api from '../libs/Api'
-    import { axios } from "axios";
     export let link;
     onMount(() => {
       link = window ? window.location.href : "";
     });
-
-    export const postLink = async () => {
-    try {
-      const response = await axios.post("/", url);
-      console.log(response)
-      return response.results;
-    } catch (error) {
-      console.error(error);
+    let url = ''
+    function postLink(){
+        fetch('https://shortme.herokuapp.com/',{
+            method : 'POST',
+            headers: new Headers({
+            Accept: '*/*',
+            'Content-Type' : 'application/json'
+		}),
+            body : JSON.stringify({'url' : url})
+        })
     }
-};
-
-let url = ''
   
     let jsonld =
   {
@@ -108,7 +106,7 @@ transition: 0.5s;
   <div class="container">
     <h1>Pendekkan</h1>
     <input bind:value={url} placeholder="Paste link.." type="text" id="link">
-    <button class="button button4" on:click={postLink}>Submit</button>
+    <button class="button button4" on:click={postLink} >Submit</button>
 <p>Hello {url || 'stranger'}!</p>
   </div>
   

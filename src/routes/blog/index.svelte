@@ -75,7 +75,7 @@ jsonld = JSON.stringify(jsonld);
 <link rel="alternate" hreflang="id-ID" href={link} />
 <meta name="geo.region" content="Indonesia" />
 <meta name="language" content="id" />
-<link rel="alternate" hreflang="id-ID" href={link} />  
+<link rel="alternate" hreflang="id-ID" href={link} />
 <meta property="og:title" content="List Artikel | Kumpulan postingan web developer">
 <meta property="og:site_name" content="Saiful Riza's Blogs">
 <meta property="og:url" content={link}>

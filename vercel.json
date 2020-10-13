@@ -2,10 +2,10 @@
     "routes": [
       {
         "src": "/(.*)",
-        "headers": { "cache-control": "s-maxage=31536000" },
+        "headers": { "cache-control": "max-age=31536000" },
         "dest": "/$1"
       },
-      { "src": "/l/(?<id>[^/]+)", "dest": "https://shortme.herokuapp.com/$id" }
+      { "src": "/l/([^/]+)", "dest": "https://shortme.herokuapp.com/$1" }
     ]
 
   }

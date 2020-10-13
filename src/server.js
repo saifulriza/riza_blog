@@ -16,9 +16,6 @@ app.use(
 		sirv('static', { dev }),
 		sapper.middleware()
 	)
-	app.get('tes', function(req,res) {
-		res.send('hai')
-	})
 	.listen(PORT, err => {
 		if (err) console.log('error', err);
 	});

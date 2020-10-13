@@ -1,6 +1,6 @@
 module.exports = (req, res) => {
   const https = require('https')
-  var url = 'blog.json';
+  var url = 'https://xn--e28h.my.id/blog.json';
 
   https.get(url, function(resp){
       var body = '';

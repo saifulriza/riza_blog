@@ -4,5 +4,5 @@ module.exports = (req, res) => {
     data = res | 'gagal';
   })
 // res.setHeader('Content-Type', 'application/xml');
-res.send(data, data.data);
+res.send(data);
 }

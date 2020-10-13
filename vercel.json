@@ -1,16 +1,13 @@
 {
-    "rewrites": [
-      {
-        "source": "/l/:match*",
-        "destination": "https://shortme.herokuapp.com/:match*"
-      }
-    ], 
     "routes": [
       {
         "src": "/(.*)",
         "headers": { "cache-control": "s-maxage=31536000" },
         "dest": "/$1"
-      }
+      },
+      { "src": "/l/(?<id>[^/]+)", "dest": "https://shortme.herokuapp.com/$id" }
     ]
 
   }
+
+  

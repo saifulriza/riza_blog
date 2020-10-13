@@ -25,6 +25,7 @@
     "marked": "^0.7.0",
     "netlify-plugin-amp-server-side-rendering": "^1.0.3",
     "node-fetch": "^2.6.1",
+    "node-sass": "^4.14.1",
     "path": "^0.12.7",
     "polka": "^0.5.2",
     "prismjs": "^1.21.0",

@@ -1,4 +1,5 @@
 module.exports = (req, res) => {
+  const http = require('https')
   var url = 'http://graph.facebook.com/517267866/?fields=picture';
 
   http.get(url, function(resp){

@@ -59,10 +59,11 @@
     box-sizing: border-box;
     border: 3px solid #ccc;
     transition: 0.5s;
-    color: #d5d2d2;
+    color: #867f7f;
   }
   :global(body.dark-mode #link) {
     background-color: gray;
+    color: #ccc;
   }
   .button {
     background-color: gray; /* Green */

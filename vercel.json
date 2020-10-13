@@ -1,8 +1,16 @@
 {
-    "rewrites": [
+    "headers": [
       {
-        "source": "/l/:match*",
-        "destination": "https://shortme.herokuapp.com/:match*"
+        "source": "/(.*)",
+        "headers" : [
+          {
+            "key" : "Cache-Control",
+            "value" : "public, max-age=31536000"
+          }
+        ]
       }
+    ],
+    "rewrites": [
+      { "source": "/l/:match*", "destination": "https://shortme.herokuapp.com/:match*" }
     ]
   }

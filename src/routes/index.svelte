@@ -6,38 +6,36 @@
     link = window ? window.location.href : "";
   });
 
-  let jsonld =
-{
-  "@context": "http://www.schema.org",
-  "@type": "person",
-  "name": "Saiful Riza",
-  "jobTitle": "Web developer",
-  "height": "72 inches",
-  "gender": "male",
-  "url": "https://riza.my.id",
-  "address": {
-     "@type": "PostalAddress",
-     "streetAddress": "Matangkuli, Aceh utara",
-     "addressLocality": "Aceh utara",
-     "addressRegion": "Aceh",
-     "postalCode": "24386",
-     "addressCountry": "Indonesia"
-  },
-  "email": "mail.saifulriza@gmail.com",
-  "birthDate": "2000-03-18",
-  "alumniOf": "Universitas Malikussaleh",
-  "birthPlace": "Matangkuli",
-  "memberOf": "Republican party",
-  "nationality": "Indonesian",
-  "colleague": [
-     "https://unimal.ac.id"
-  ]
-}
-jsonld = JSON.stringify(jsonld);
-  let jsonldScript = `<script type="application/ld+json">${jsonld +
-    "<"}/script>`;
-
+  let jsonld = {
+    "@context": "http://www.schema.org",
+    "@type": "person",
+    name: "Saiful Riza",
+    jobTitle: "Web developer",
+    height: "72 inches",
+    gender: "male",
+    url: "https://riza.my.id",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Matangkuli, Aceh utara",
+      addressLocality: "Aceh utara",
+      addressRegion: "Aceh",
+      postalCode: "24386",
+      addressCountry: "Indonesia",
+    },
+    email: "mail.saifulriza@gmail.com",
+    birthDate: "2000-03-18",
+    alumniOf: "Universitas Malikussaleh",
+    birthPlace: "Matangkuli",
+    memberOf: "Republican party",
+    nationality: "Indonesian",
+    colleague: ["https://unimal.ac.id"],
+  };
+  jsonld = JSON.stringify(jsonld);
+  let jsonldScript = `<script type="application/ld+json">${
+    jsonld + "<"
+  }/script>`;
 </script>
+
 <style>
   .home-container {
     align-items: center;
@@ -93,6 +91,14 @@ jsonld = JSON.stringify(jsonld);
       text-align: center;
     }
   }
+  :global(body) {
+    background-color: #f2eee2;
+    transition: background-color 0.3s;
+  }
+  :global(body.dark-mode) {
+    background-color: #1d3040;
+    color: #7d7979;
+  }
 </style>
 
 <svelte:head>
@@ -104,20 +110,24 @@ jsonld = JSON.stringify(jsonld);
   <link rel="alternate" hreflang="id-ID" href={link} />
   <meta name="geo.region" content="Indonesia" />
   <meta name="language" content="id" />
-  <link rel="alternate" hreflang="id-ID" href={link} />  
-  <meta property="og:title" content="Kumpulan Artikel Saiful Riza">
-  <meta property="og:site_name" content="Saiful Riza's Blogs">
-  <meta property="og:url" content={link}>
-  <meta property="og:description" content="Kumpulan artikel dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar web development dan hal lainnya">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://xn--e28h.my.id/favicon.png">
+  <link rel="alternate" hreflang="id-ID" href={link} />
+  <meta property="og:title" content="Kumpulan Artikel Saiful Riza" />
+  <meta property="og:site_name" content="Saiful Riza's Blogs" />
+  <meta property="og:url" content={link} />
+  <meta
+    property="og:description"
+    content="Kumpulan artikel dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar web development dan hal lainnya" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://xn--e28h.my.id/favicon.png" />
   <meta name="twitter:title" content="Kumpulan Artikel Saiful Riza" />
-  <meta name="twitter:description" content="Kumpulan artikel dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar web development dan hal lainnya" />
+  <meta
+    name="twitter:description"
+    content="Kumpulan artikel dari Saiful riza tentang apa yang sudah ia pelajari mulai dari seputar web development dan hal lainnya" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@rizasblog" />
   <meta name="twitter:creator" content="@riza" />
   <meta name="twitter:image" content="https://xn--e28h.my.id/riza.jpg" />
-  <link rel="canonical" href={link}/>
+  <link rel="canonical" href={link} />
   {@html jsonldScript}
   <title>It's All About Saiful Riza And His Journey With his Laptop</title>
 </svelte:head>
@@ -125,12 +135,10 @@ jsonld = JSON.stringify(jsonld);
 <div class="home-container">
   <div class="home-copy">
     <h1>Welcome to My Journey</h1>
-    <p>
-      let's start your world with me
-    </p>
+    <p>let's start your world with me</p>
   </div>
 
   <figure>
-    <img alt="Person typing on laptop" src="undraw-illustration.svg"/>
+    <img alt="Person typing on laptop" src="undraw-illustration.svg" />
   </figure>
 </div>

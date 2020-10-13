@@ -5,9 +5,17 @@
         "headers": { "cache-control": "max-age=31536000" },
         "dest": "/$1"
       },
+      {
+        "src": "https://www.googletagmanager.com",
+        "headers": { "cache-control": "max-age=31536000" },
+        "dest": "/$1"
+      },
+      {
+        "src": "https://www.google-analytics.com",
+        "headers": { "cache-control": "max-age=31536000" },
+        "dest": "/$1"
+      },
       { "src": "/l/([^/]+)", "dest": "https://shortme.herokuapp.com/$1" }
     ]
 
   }
-
-  

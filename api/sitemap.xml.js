@@ -1,14 +1,14 @@
 module.exports = (req, res) => {
   var url = 'http://graph.facebook.com/517267866/?fields=picture';
 
-  http.get(url, function(res){
+  http.get(url, function(resp){
       var body = '';
   
-      res.on('data', function(chunk){
+      resp.on('data', function(chunk){
           body += chunk;
       });
   
-      res.on('end', function(){
+      resp.on('end', function(){
           var fbResponse = JSON.parse(body);
           res.send(fbResponse);
           console.log("Got a response: ", fbResponse.picture);

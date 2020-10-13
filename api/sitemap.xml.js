@@ -1,6 +1,6 @@
 module.exports = (req, res) => {
   const https = require('https')
-  var url = 'https://graph.facebook.com/517267866/?fields=picture';
+  var url = 'blog.json';
 
   https.get(url, function(resp){
       var body = '';

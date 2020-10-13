@@ -3,39 +3,37 @@ module.exports = (req, res) => {
   var url = "https://xn--e28h.my.id/blog.json";
 
   https
-    .get(url, function (resp) {
-      var body = "";
+      .get(url,
+           function(resp) {
+             var body = "";
 
-      resp.on("data", function (chunk) {
-        body += chunk;
-      });
+             resp.on("data", function(chunk) { body += chunk; });
 
-      resp.on("end", function () {
-        var posts = JSON.parse(body);
-        const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
+             resp.on("end", function() {
+               var posts = JSON.parse(body);
+               const render = (posts) =>
+                   `<?xml version="1.0" encoding="UTF-8" ?>
         <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url><loc>https://xn--e28h.my.id/</loc><priority>0.85</priority></url>
         <url><loc>https://xn--e28h.my.id/about</loc><priority>0.85</priority></url>
         <url><loc>https://xn--e28h.my.id/blog</loc><priority>0.85</priority></url>
         <url><loc>https://xn--e28h.my.id/link</loc><priority>0.85</priority></url>
-    ${posts
-      .map(function (post) {
-        return `<url>
+    ${posts.map(function(post) {
+                     return `<url>
                  <loc>${"https://xn--e28h.my.id/blog/" + post.slug}</loc>
                  <priority>0.69</priority>
             </url>`;
-      })
-      .join("")}
+                   }).join("")}
     </urlset>
 `;
-        const xml = render(posts);
-        res.setHeader("Content-Type", "application/xml");
-        res.send(xml);
+               const xml = render(posts);
+               res.setHeader("Content-Type", "application/xml");
+               res.send(xml);
+             });
+           })
+      .on("error", function(e) {
+        res.send(e);
+        console.log("Got an error: ", e);
       });
-    })
-    .on("error", function (e) {
-      res.send(e);
-      console.log("Got an error: ", e);
-    });
   // res.setHeader('Content-Type', 'application/xml')
 };

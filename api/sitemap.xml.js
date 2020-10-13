@@ -1,8 +1,8 @@
 module.exports = (req, res) => {
-  const http = require('https')
-  var url = 'http://graph.facebook.com/517267866/?fields=picture';
+  const https = require('https')
+  var url = 'https://graph.facebook.com/517267866/?fields=picture';
 
-  http.get(url, function(resp){
+  https.get(url, function(resp){
       var body = '';
   
       resp.on('data', function(chunk){

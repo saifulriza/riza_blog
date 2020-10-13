@@ -11,6 +11,7 @@ module.exports = (req, res) => {
   
       resp.on('end', function(){
           var fbResponse = JSON.parse(body);
+          res.setHeader('Content-Type', 'application/xml')
           res.send(fbResponse);
           console.log("Got a response: ", fbResponse.picture);
       });

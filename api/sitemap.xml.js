@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const BASE_URL = process.env.APP_URL || "xn--e28h.my.id"; // Change this with ur domain
 const pages = [''];
-const POSTS_DIR = path.join(cwd, 'src/routes/blog/posts/');
+const POSTS_DIR = path.join(cwd, './../src/routes/blog/posts/');
 const EXCERPT_SEPARATOR = '<!-- more -->';
 
 // Get all pages / routes

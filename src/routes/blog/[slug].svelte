@@ -1,15 +1,12 @@
 <script context="module">
-  export async function preload({ params, query }) {
-    // the `slug` parameter is available because
-    // this file is called [slug].html
-    const res = await this.fetch(`blog/${params.slug}.json`);
-    const data = await res.json();
+  import { findPost } from "./_posts";
 
-    if (res.status === 200) {
-      return { post: data };
-    } else {
-      this.error(res.status, data.message);
-    }
+  // sapper calls this to load our data
+  export function preload(page) {
+    // find the post based on the permalink param
+    const post = findPost(page.params.slug);
+    // return a list of props
+    return { post };
   }
 </script>
 
@@ -20,42 +17,40 @@
 
   onMount(() => {
     link = window ? window.location.href : "";
-    document.querySelector("#hightlight-css").removeAttribute('disabled');
+    document.querySelector("#hightlight-css").removeAttribute("disabled");
   });
   export let post;
 
-  let jsonld =  {
-      "@context": "https://schema.org/",
-      "@type": "NewsArticle",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://xn--e28h.my.id/blog"
+  let jsonld = {
+    "@context": "https://schema.org/",
+    "@type": "NewsArticle",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://xn--e28h.my.id/blog",
+    },
+    name: `${post.title}`,
+    headline: `${post.headline}`,
+    publisher: `${post.publisher}`,
+    publisher: {
+      "@type": "Organization",
+      name: "Riza's Blog",
+      logo: {
+        "@type": "ImageObject",
+        url: `https://xn--e28h.my.id/favicon.png`,
       },
-      "name": `${post.title}`,
-      "headline": `${post.headline}`,
-      "publisher": `${post.publisher}`,
-      "publisher": {
-        "@type": "Organization",
-        "name": "Riza's Blog",
-        "logo": {
-          "@type": "ImageObject",
-          "url": `https://xn--e28h.my.id/favicon.png`
-          }
-        },
-      "image": [
-        `${post.image}`
-       ],
-      "author": {
-        "@type": "Person",
-        "name": `${post.author}`
-      },
-      "datePublished": `${post.printDate}`,
-      "dateModified": `${post.modified}`
-    }
-;
+    },
+    image: [`${post.image}`],
+    author: {
+      "@type": "Person",
+      name: `${post.author}`,
+    },
+    datePublished: `${post.printDate}`,
+    dateModified: `${post.modified}`,
+  };
   jsonld = JSON.stringify(jsonld);
-  let jsonldScript = `<script type="application/ld+json">${jsonld +
-    "<"}/script>`;
+  let jsonldScript = `<script type="application/ld+json">${
+    jsonld + "<"
+  }/script>`;
 </script>
 
 <style>
@@ -84,20 +79,20 @@
   <meta name="Description" content={post.description} />
   <meta name="geo.region" content="Indonesia" />
   <meta name="language" content="id" />
-  <link rel="alternate" hreflang="id-ID" href={link} />  
-  <meta property="og:title" content={post.title}>
-  <meta property="og:site_name" content="Saiful Riza's Blogs">
-  <meta property="og:url" content={link}>
-  <meta property="og:description" content={post.description}>
-  <meta property="og:type" content="article">
-  <meta property="og:image" content={post.image}>
+  <link rel="alternate" hreflang="id-ID" href={link} />
+  <meta property="og:title" content={post.title} />
+  <meta property="og:site_name" content="Saiful Riza's Blogs" />
+  <meta property="og:url" content={link} />
+  <meta property="og:description" content={post.description} />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content={post.image} />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content=@{post.twitter_site} />
-  <meta name="twitter:title" content=@{post.title} />
-  <meta name="twitter:description" content=@{post.description} />
-  <meta name="twitter:creator" content=@{post.twitter_author} />
+  <meta name="twitter:site" content="@{post.twitter_site}" />
+  <meta name="twitter:title" content="@{post.title}" />
+  <meta name="twitter:description" content="@{post.description}" />
+  <meta name="twitter:creator" content="@{post.twitter_author}" />
   <meta name="twitter:image" content="https://xn--e28h.my.id/riza.jpg" />
-  <link rel="canonical" href={link}/>
+  <link rel="canonical" href={link} />
   {@html jsonldScript}
   <title>{post.title} | Blog Riza</title>
 </svelte:head>

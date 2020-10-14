@@ -114,7 +114,7 @@
   <h1>Pendekkan</h1>
   <input bind:value={url} placeholder="Paste link.." type="text" id="link" />
   <button
-    class="button button4"
+    class="button"
     on:click={postLink}>{loading ? 'Loading..' : 'Submit'}</button>
   {#if typeof result === 'object' && result !== null}
     <p>Hasilnya : 😀.my.id/l/{result.id}</p>

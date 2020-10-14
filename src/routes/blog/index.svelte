@@ -76,8 +76,8 @@
   .button {
     background-color: gray; /* Green */
     border: none;
-    color: #d5d2d2;
-    padding: 16px 32px;
+    color: #fff;
+    padding: 5px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -85,6 +85,7 @@
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    margin-top: 6%;
   }
   :global(body.dark-mode .button) {
     background-color: gray;

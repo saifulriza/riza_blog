@@ -1,12 +1,12 @@
 <script context="module">
-  import { pages } from "./_posts";
+  import { pages, posts } from "./_posts";
 
   export function preload(page) {
     try {
       const index = +(page.query.page || 1);
       const halaman = {
         posts: pages[index - 1],
-        hasMore: Object.keys(pages[index - 1]).length > index + 1,
+        hasMore: posts.length > index + 1,
         page: index,
       };
       return halaman;

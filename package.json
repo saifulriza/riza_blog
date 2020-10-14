@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "blog_riza",
+  "description": "Blog saiful riza",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

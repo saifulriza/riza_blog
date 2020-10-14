@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import MainLaptop from "./../components/MainLaptop.svelte";
   export let link;
 
   onMount(() => {
@@ -42,7 +43,7 @@
     display: flex;
     flex: 1;
     justify-content: center;
-    margin: 2em 0;
+    margin: 0em 0;
     min-height: 400px;
   }
 
@@ -60,23 +61,9 @@
     line-height: 1.5;
   }
 
-  figure {
-    margin: 0 1em;
-    text-align: center;
-  }
-
-  img {
-    width: 100%;
-    max-width: 400px;
-  }
-
   @media (max-width: 1020px) {
     p {
       font-size: 1.2em;
-    }
-
-    img {
-      max-width: 300px;
     }
   }
 
@@ -137,8 +124,5 @@
     <h1>Welcome to My Journey</h1>
     <p>let's start your world with me</p>
   </div>
-
-  <figure>
-    <img alt="Person typing on laptop" src="undraw-illustration.svg" />
-  </figure>
+  <MainLaptop />
 </div>

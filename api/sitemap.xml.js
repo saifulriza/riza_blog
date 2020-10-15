@@ -13,7 +13,18 @@ module.exports = (req, res) => {
       resp.on("end", function () {
         const a = [
           {
-            nama: "saiful",
+            title: "Hello World",
+            description: "Hello world",
+            slug: "hello-world-copy",
+            excerpt: "",
+            printDate: "November 27, 2017",
+          },
+          {
+            title: "Hello World",
+            description: "Hello world",
+            slug: "hello-world",
+            excerpt: "",
+            printDate: "November 27, 2017",
           },
         ];
         const xml = a;

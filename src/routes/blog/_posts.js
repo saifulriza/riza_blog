@@ -1,6 +1,5 @@
 import _ from "lodash";
 import all from "./posts/*.md";
-import fs from "fs";
 
 export const posts = _.chain(all) // begin a chain
   // .map(transform) // transform the shape of each post
@@ -8,16 +7,6 @@ export const posts = _.chain(all) // begin a chain
   .value(); // convert chain back to array
 
 export const pages = _.chunk(posts, 5);
-
-fs.open("sitemap.xml", "w", function (err, file) {
-  if (err) throw err;
-  console.log("Saved!");
-});
-
-fs.writeFile("sitemap.xml", "Hello content!", function (err) {
-  if (err) throw err;
-  console.log("Saved too!");
-});
 
 // // function for reshaping each post
 // function transform({slug, html, metadata}) {

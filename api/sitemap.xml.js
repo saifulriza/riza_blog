@@ -11,7 +11,7 @@ module.exports = (req, res) => {
       });
 
       resp.on("end", function () {
-        var posts = JSON.parse(body);
+        var posts = JSON.parse(body[0]);
         const xml = `<?xml version="1.0" encoding="UTF-8" ?>
         <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url><loc>https://xn--e28h.my.id/</loc><priority>0.85</priority></url>

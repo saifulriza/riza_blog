@@ -29,6 +29,7 @@ export default {
   client: {
     input: config.client.input(),
     output: config.client.output(),
+    external: ["fs"],
     plugins: [
       replace({
         "process.browser": true,
@@ -81,6 +82,7 @@ export default {
   server: {
     input: config.server.input(),
     output: config.server.output(),
+    external: ["fs"],
     plugins: [
       replace({
         "process.browser": false,

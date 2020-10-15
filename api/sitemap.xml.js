@@ -11,9 +11,12 @@ module.exports = (req, res) => {
       });
 
       resp.on("end", function () {
-        const xml = {
-          nama: "saiful",
-        };
+        const a = [
+          {
+            nama: "saiful",
+          },
+        ];
+        const xml = a;
         //         console.log("Body : ", body);
         //         console.log("Body[0] : ", body[0]);
         //         var posts = JSON.parse(body[0]);

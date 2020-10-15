@@ -32,7 +32,7 @@ module.exports = (req, res) => {
         //       .join("")}
         //     </urlset>
         // `;
-        // res.setHeader("Content-Type", "application/xml");
+        res.setHeader("Content-Type", "application/json");
         res.send(xml);
       });
     })

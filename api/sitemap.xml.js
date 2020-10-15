@@ -11,7 +11,7 @@ module.exports = (req, res) => {
       });
 
       resp.on("end", function () {
-        const xml = body;
+        const xml = body[0];
         //         console.log("Body : ", body);
         //         console.log("Body[0] : ", body[0]);
         //         var posts = JSON.parse(body[0]);

@@ -19,12 +19,19 @@
 <script>
   // import Pagination from "../../components/Pagination.svelte";
   import { onMount } from "svelte";
-  export let link;
-  export let posts, hasMore, page;
+  export let link, posts, hasMore, page, cari;
 
   onMount(() => {
     link = window ? window.location.href : "";
   });
+
+  function clickBtn() {
+    let el = document.getElementById("search-form");
+    let style = window.getComputedStyle(el);
+    style.display == "none"
+      ? (el.style.display = "block")
+      : (el.style.display = "none");
+  }
 
   let jsonld = {
     "@context": "http://www.schema.org",
@@ -90,6 +97,25 @@
   :global(body.dark-mode .button) {
     background-color: gray;
   }
+  #search-form {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    transition: 0.5s;
+    color: #867f7f;
+    display: none;
+  }
+  .inline {
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    margin: 0px 0 4em 0;
+  }
+  .btn-search {
+    cursor: pointer;
+  }
 </style>
 
 <svelte:head>
@@ -122,7 +148,16 @@
 </svelte:head>
 
 <div class="container">
-  <h1>Blog</h1>
+  <div class="inline">
+    <h1>Blog</h1>
+    <img src="search.svg" alt="search" class="btn-search" on:click={clickBtn} />
+  </div>
+  <input
+    placeholder="Cari Post.."
+    type="text"
+    id="search-form"
+    bind:value={cari} />
+  {cari}
   {#each posts as post, index}
     {#if index}
       <hr />

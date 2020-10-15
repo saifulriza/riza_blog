@@ -5,7 +5,6 @@
   export function preload(page) {
     // find the post based on the permalink param
     const post = findPost(page.params.slug);
-    console.log(post);
     // return a list of props
     return { post };
   }

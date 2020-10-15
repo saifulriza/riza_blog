@@ -11,23 +11,23 @@ module.exports = (req, res) => {
       });
 
       resp.on("end", function () {
-        const a = [
-          {
-            title: "Hello World",
-            description: "Hello world",
-            slug: "hello-world-copy",
-            excerpt: "",
-            printDate: "November 27, 2017",
-          },
-          {
-            title: "Hello World",
-            description: "Hello world",
-            slug: "hello-world",
-            excerpt: "",
-            printDate: "November 27, 2017",
-          },
-        ];
-        const xml = a;
+        // const a = [
+        //   {
+        //     title: "Hello World",
+        //     description: "Hello world",
+        //     slug: "hello-world-copy",
+        //     excerpt: "",
+        //     printDate: "November 27, 2017",
+        //   },
+        //   {
+        //     title: "Hello World",
+        //     description: "Hello world",
+        //     slug: "hello-world",
+        //     excerpt: "",
+        //     printDate: "November 27, 2017",
+        //   },
+        // ];
+        // const xml = a;
         //         console.log("Body : ", body);
         //         console.log("Body[0] : ", body[0]);
         //         var posts = JSON.parse(body[0]);
@@ -49,7 +49,7 @@ module.exports = (req, res) => {
         //     </urlset>
         // `;
         res.setHeader("Content-Type", "application/json");
-        res.send(xml);
+        res.send(body);
       });
     })
     .on("error", function (e) {

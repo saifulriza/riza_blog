@@ -117,6 +117,16 @@
     class="button"
     on:click={postLink}>{loading ? 'Loading..' : 'Submit'}</button>
   {#if typeof result === 'object' && result !== null}
-    <p>Hasilnya : 😀.my.id/l/{result.id}</p>
+    {#if result.id}
+      <p>Hasilnya : 😀.my.id/l/{result.id}</p>
+    {/if}
+    {#if !result.id}
+      <p>
+        Error :
+        {result.error}
+        <br />
+        Contoh link yang benar : https://google.com
+      </p>
+    {/if}
   {/if}
 </div>
